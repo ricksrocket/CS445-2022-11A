@@ -44,7 +44,7 @@ const shoppingCart = (function () {
             else {
                 // removeItemById(item.id);
             /**
-             * ?The two lines above runs the method of removal, which actually filters the object out if it's there, 
+             * ?The two lines below runs the method of removal, which actually filters the object out if it's there, 
              * ? then we push it in after we make sure it's not there to begin with. That method call above works in the object version
              * ? of this pattern implementation but will not execute without error in this function version. This differs from the object
              * ? version in that the object version was able to call the above method from itself and work as intended. So the
