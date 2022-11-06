@@ -20,16 +20,6 @@ class Subject {
     constructor() {
         this.observerList = {};
     }
-    on1(event, fn) {
-        this.event = event
-        console.log(this.observerList.event)
-        // this.event = event;
-        this.observerList[this.event] = [fn]
-        console.log("length", this.observerList[this.event].length)
-
-        console.log(this.observerList);
-    }
-
     on(event, fn) {
         this.event = event
         if (this.observerList[this.event]) {
@@ -39,28 +29,20 @@ class Subject {
             this.observerList[this.event] = [fn]
         }
 
-        console.log(this.observerList);
+        // console.log(this.observerList);
     }
-
     emit(event, msg) {
         this.msg = msg;
         this.event = event;
         this.observerList[this.event].forEach(fn => {
             fn(this.msg)
-
         });
-
     }
-
 }
 
 const subject = new Subject();
 subject.on('eat', console.log); // register an observer
-
-
 subject.on('study', console.log); // register an observer
-
-
 function foo(msg) {
     console.log('foo: ' + msg);
 }
