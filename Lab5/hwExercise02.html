@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+
+            document.getElementById("btn").onclick = function () {
+                console.log("hello");
+                console.log(document.getElementById("y").value)
+                if (document.getElementById("x").value && document.getElementById("y").value) {
+                    console.log(document.getElementById("x").value);
+                    let x = +(document.getElementById("x").value);
+                    console.log(x)
+                    let y = +(document.getElementById("y").value);
+                    document.getElementById("result").value = x + y;
+
+                }
+                else {
+                    console.log(document.getElementById("x").value)
+                    console.log(document.getElementById("y").value)
+                    document.getElementById("result").value = "Enter two numbers"
+                }
+
+                // console.log(document.getElementById("x").value;
+                // console.log(temp);
+                // document.getElementById("left").src = document.getElementById("right").src;
+                // document.getElementById("right").src = temp;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <h1>Calculator</h1>
+        <!-- <form action="/action_page.php"> -->
+        <label for="x">x-register:</label>
+        <input type="text" id="x" name="x"><br><br>
+        <label for="y">y-register:</label>
+        <input type="text" id="y" name="y"><br><br>
+        <label for="result">result:</label>
+        <input type="text" id="result" name="result"><br><br>
+        <button id="btn">sum</button>
+        </form>
+
+        <p>Click the "sum" button to add the two numbers in the "x-" and "y-" registers.</p>
+
+    </div>
+</body>
+
+<script>
+    /**
+     * ! Create a simple calculator.html page which has 3 inputs and 1 submit on it.
+    The first 2 inputs are only allowed to put numbers.
+    If you use type any number in the first 2 inputs, 
+    then click submit button. JavaScript will sum the 
+    two numbers, display the typed number in the first 2 inputs, 
+    the result in the last input.
+     **/
+
+
+
+
+
+</script>
+
+</html>

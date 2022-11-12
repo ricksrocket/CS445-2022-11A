@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+
+
+        window.onload = function () {
+            class Calculator {
+                constructor() {
+                    this.methods = {
+                        "-": (x, y) => this.x - this.y,
+                        "+": (x, y) => this.x + this.y,
+                        "*": (x, y) => this.x * this.y,
+                        "/": (x, y) => this.x / this.y,
+                        "**": (x, y) => this.x ** this.y,
+                        "%": (x, y) => this.x % this.y,
+                        "root": (x, y) => this.x ** (1 / this.y)
+                    };
+                }
+
+                calculate(x, y, op) {
+                    this.x = x;
+                    this.y = y;
+                    this.op = op;
+                    if (!this.methods[this.op] || isNaN(this.x) || isNaN(this.y)) {
+                        return "Error:  Invalid inputs";
+                    }
+
+                    return this.methods[this.op](this.x, this.y);
+                };
+            }
+            let calculator = new Calculator;
+
+            document.getElementById("btn").onclick = function () {
+                let x = +document.getElementById("x").value;//+ replaces parseInt
+                let y = +document.getElementById("y").value;//+ replaces parseInt
+                let op = document.getElementById("op").value.toLowerCase();
+                document.getElementById("result").value = calculator.calculate(x, y, op);
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <h1>Calculator</h1>
+        <!-- <form action="/action_page.php"> -->
+        <label for="x">x-register:</label>
+        <input type="text" id="x" name="x"><br><br>
+        <label for="y">y-register:</label>
+        <input type="text" id="y" name="y"><br><br>
+        <label for="op">Operation (+, -, *, /, etc.)</label>
+        <input type="text" id="op" name="op"><br><br>
+        <label for="result">RESULT:</label>
+        <input type="text" id="result" name="result"><br><br>
+        <button id="btn">Calculate</button>
+        </form>
+
+        <h3>
+            Enter two numbers AND one operation from the available choices below:
+        </h3>
+        <ul>
+            <li>+ (addition)</li>
+            <li>- (subtraction)</li>
+            <li>* (multiplication)</li>
+            <li>/ (division)</li>
+            <li>% (modulus)</li>
+            <li>** (x^y)</li>
+            <li>root (x^(1/y) </li>
+        </ul>
+
+        <h3>Example1:</h3>
+        <p>x-register: 10</p>
+        <p>y-register: 2</p>
+        <p>Operation: **</p>
+        <p>RESULT: 100</p>
+
+        <h3>Example2:</h3>
+        <p>x-register: 10</p>
+        <p>y-register: 2</p>
+        <p>Operation: root</p>
+        <p>RESULT: 3.1623 (sqrt(10))</p>
+    </div>
+
+    </div>
+</body>
+
+<script>
+    /**
+     * ! Create a simple calculator.html page which has 3 inputs and 1 submit on it.
+    The first 2 inputs are only allowed to put numbers.
+    If you use type any number in the first 2 inputs, 
+    then click submit button. JavaScript will sum the 
+    two numbers, display the typed number in the first 2 inputs, 
+    the result in the last input.
+     **/
+
+
+
+
+
+</script>
+
+</html>
