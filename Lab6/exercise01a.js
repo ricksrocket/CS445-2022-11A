@@ -10,6 +10,6 @@ const isPrime = num => new Promise((resolve, reject) => {
 
 console.log('start');
 isPrime(9)
-    .then(res => console.log(res))
-    .catch(err => console.error(err));
+    .then(resolve => console.log(resolve))
+    .catch(error => console.error(error));
 console.log('end');
