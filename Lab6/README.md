@@ -1,3 +1,3 @@
-Promise Homework
+## Promise Homework
 exercise01 - primes
 exercise01 - 
