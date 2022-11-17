@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee List</title>
+    <script src="FetchIndex.js" type="text/javascript"></script>
+</head>
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+    .pageContainer {
+        max-width: 1000px;
+    }
+
+    .header {
+        background-color: lightgray;
+        text-align: center;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: rows;
+        justify-content: space-between;
+    }
+
+    #employeeInfo {
+       justify-content: flex-end;
+
+    }
+
+    img {
+        border: 1px solid red;
+        max-width: 128px;
+        margin-right: auto;
+    }
+
+    #refresh {
+        background-color: #198754;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        height: 30px;
+        font-size: 22px;
+    }
+
+    .name {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    #employeeInfo {
+        border: 1px ;
+    } 
+</style>
+
+<body>
+    <div class="pageContainer">
+        <h1 class="header">Employee List</h1>
+        <div id="empContainer">
+        </div>
+        <div class="btn-container">
+            <button id="refresh">Refresh</button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
